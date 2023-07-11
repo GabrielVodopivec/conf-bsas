@@ -1,0 +1,202 @@
+#form-section {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+#form {
+    padding: 30px 30px 30px 30px;
+    width: 790px;
+}
+
+input,
+select {
+    border: 2px solid var(--border-color);
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 1.1em;
+    height: var(--input-height);
+    padding: 0 0 0 15px;
+    outline-color: goldenrod;
+    background-color: white;
+
+}
+
+
+
+label {
+    box-sizing: border-box;
+    padding-left: 10px;
+}
+
+#form>.nombre-apellido {
+    box-sizing: border-box;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    width: 100%;
+}
+
+.nombre-apellido>.input-container>input {
+    width: 100%;
+}
+
+.nombre-apellido>input {
+    width: 100%;
+}
+
+.input-container {
+    box-sizing: border-box;
+    position: relative;
+    width: 100%;
+}
+
+.inputError {
+    border-color: red;
+}
+
+.errorMessage {
+    position: absolute;
+    background-color: white;
+    padding: 0 2px;
+    border-radius: 5px;
+    bottom: -0.5em;
+    right: 10px;
+    font-size: .9em;
+    color: red;
+    display: none;
+}
+
+#errorSubmit {
+    bottom: auto;
+    top: -1.75em;
+}
+
+input[name="email"] {
+    box-sizing: border-box;
+    height: var(--input-height);
+    margin-top: 20px;
+    width: 100%;
+}
+
+
+.cantidad-categoria {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.cantidad,
+.categoria {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+.cantidad>.input-container,
+.categoria>.input-container {
+    width: 100%;
+}
+
+.cantidad>.input-container>input,
+.categoria>.input-container>select {
+    width: 100%;
+}
+
+#total-a-pagar {
+    box-sizing: border-box;
+    background-color: rgb(204, 229, 255);
+    height: calc(var(--input-height) + 15px);
+    margin-top: 30px;
+    width: 100%;
+}
+
+.borrar-resumen {
+    display: flex;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.borrar-resumen>input {
+    padding: 0;
+    width: 50%;
+}
+
+#borrar,
+#resumen {
+    height: auto;
+    box-sizing: border-box;
+    background-color: var(--button-color-secondary);
+    color: var(--text-color-primary);
+    border-color: transparent;
+    padding: 10px 0;
+}
+
+input[type="submit"],
+input[type="reset"] {
+    cursor: pointer;
+    transition: opacity 300ms;
+}
+
+input[type="submit"]:disabled {
+    cursor: default;
+    opacity: 70%;
+}
+
+@media screen and (max-width: 850px) {
+    #form {
+        box-sizing: border-box;
+        width: 100vw;
+        padding: 0 20px 30px 20px;
+    }
+
+    label {
+        padding-left: 5px;
+    }
+
+    #errorMessage {
+        font-size: 0.7em;
+    }
+
+    .cantidad>.input-container,
+    .cantidad>.input-container>input {
+        width: 100%;
+    }
+
+    #errorQuantity {
+        bottom: -.7em;
+        right: auto;
+        left: 10px;
+    }
+
+    .categoria>.input-container,
+    .categoria>.input-container>select {
+        width: 100%;
+    }
+
+    .cantidad {
+        width: 50%;
+    }
+
+    .categoria {
+        width: 100%;
+    }
+
+    #errorSelect {
+        right: 10px;
+        left: auto;
+        bottom: auto;
+        top: -.7em;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #form>.nombre-apellido {
+        flex-direction: column;
+    }
+}

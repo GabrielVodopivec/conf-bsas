@@ -1,0 +1,46 @@
+body {
+    background-color: #212529;
+}
+
+h1 {
+    margin: 0;
+    padding: 20px 0;
+    width: 100%;
+    color: aliceblue;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.panel {
+    width: 400px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+.menuItem {
+    padding: 15px 15px;
+    border: 2px solid var(--color-yellow-primary);
+    border-radius: 5px;
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 1.5em;
+}
+
+.menuItem:hover {
+    background-color: var(--color-yellow-primary);
+    color: #212529;
+    border-color: var(--color-yellow-primary);
+    font-weight: 600;
+    transition: background-color 600ms;
+}

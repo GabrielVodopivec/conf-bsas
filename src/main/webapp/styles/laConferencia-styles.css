@@ -1,0 +1,202 @@
+.laConferencia {
+    position: relative;
+    height: calc(100vh - var(--header-height));
+}
+
+.userWelcome {
+    position: absolute;
+    z-index: 5;
+    width: 100%;
+    text-align: center;
+    backdrop-filter: blur(5px) brightness(.7);
+    color: white;
+    font-size: 2em;
+}
+
+.laConferencia>.bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    filter: brightness(90%);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: 30s ease-in 0s infinite normal backwards;
+}
+
+.laConferencia>.bg1 {
+    opacity: 100%;
+    background-image:
+        linear-gradient(to left, rgba(0, 0, 0, 0.75) 50%, rgba(0, 0, 0, 0)),
+        url("../images/la-conferencia/ba1.jpg");
+    animation-name: transformOpacityB1;
+}
+
+.laConferencia>.bg2 {
+    background-image:
+        linear-gradient(to left, rgba(0, 0, 0, 0.75) 50%, rgba(0, 0, 0, 0)),
+        url("../images/la-conferencia/ba2.jpg");
+    animation-name: transformOpacityB2;
+}
+
+.laConferencia>.bg3 {
+    opacity: 100%;
+    background-image:
+        linear-gradient(to left, rgba(0, 0, 0, 0.75) 50%, rgba(0, 0, 0, 0)),
+        url("../images/la-conferencia/ba3.jpg");
+}
+
+.contenedor-descripcion-conferencia {
+    position: absolute;
+    right: 10%;
+    bottom: 20%;
+    max-width: 650px;
+    padding-left: 10px;
+}
+
+.contenedor-descripcion-conferencia>h1,
+.contenedor-descripcion-conferencia>p {
+    text-align: right;
+    color: white;
+}
+
+.contenedor-descripcion-conferencia h1 {
+    font-size: 2em;
+    margin-bottom: 0;
+}
+
+.contenedor-descripcion-conferencia p {
+    margin-top: 15px;
+    font-size: 1.5em;
+    line-height: 1.4;
+}
+
+.contenedor-botones {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px
+}
+
+.boton-quiero-ser-orador {
+    padding: 10px;
+    color: white;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.boton-quiero-ser-orador:hover {
+    color: var(--text-color-alternative);
+    background-color: white;
+}
+
+.boton-comprar-tickets {
+    padding: 10px;
+    color: white;
+    background-color: var(--button-color-primary);
+    border-radius: 5px;
+    border: transparent;
+    cursor: pointer;
+}
+
+.contenedor-botones button {
+    font-size: 1.5em;
+    text-decoration: none;
+    color: white;
+}
+
+@media screen and (max-height: 920px) and (max-width: 800px) {
+    .contenedor-descripcion-conferencia {
+        top: auto;
+        right: 20px;
+        bottom: 30px;
+        left: auto;
+        width: 90%;
+    }
+
+    .contenedor-descripcion-conferencia p {
+        font-size: 1em;
+    }
+
+    .contenedor-botones button {
+        font-size: 1em;
+    }
+
+    .laConferencia>.bg {
+        background-position: left;
+    }
+
+    .laConferencia>.bg1 {
+        background-image:
+            linear-gradient(to top, rgba(0, 0, 0, 0.75) 50%, rgba(0, 0, 0, 0)),
+            url("../images/la-conferencia/ba1.jpg");
+    }
+
+    .laConferencia>.bg2 {
+        background-image:
+            linear-gradient(to top, rgba(0, 0, 0, 0.75) 50%, rgba(0, 0, 0, 0)),
+            url("../images/la-conferencia/ba2.jpg");
+    }
+
+    .laConferencia>.bg3 {
+        background-image:
+            linear-gradient(to top, rgba(0, 0, 0, 0.75) 50%, rgba(0, 0, 0, 0)),
+            url("../images/la-conferencia/ba3.jpg");
+    }
+}
+
+@media screen and (max-height: 500px) and (min-width: 800px) {
+
+    .contenedor-descripcion-conferencia {
+        bottom: 30px;
+        right: 50px;
+        padding: 0;
+    }
+
+    .contenedor-descripcion-conferencia h1 {
+        font-size: 1.5em;
+        margin-bottom: 0;
+    }
+
+    .contenedor-descripcion-conferencia p {
+        margin-top: 15px;
+        font-size: 1.1em;
+        line-height: normal;
+    }
+
+    .contenedor-botones button {
+        font-size: 1em;
+    }
+}
+
+@keyframes transformOpacityB1 {
+
+    0%,
+    25% {
+        opacity: 100%;
+    }
+
+    33%,
+    90% {
+        opacity: 0%;
+    }
+
+    100% {
+        opacity: 100%;
+    }
+}
+
+@keyframes transformOpacityB2 {
+
+    0%,
+    56% {
+        opacity: 100%;
+    }
+
+    66%,
+    100% {
+        opacity: 0%;
+    }
+}

@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;1,200;1,300;1,400;1,600;1,700;1,800&display=swap');
+
+* {
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+:root {
+    --header-height: 70px;
+    --header-backgroundColor: rgb(53, 58, 64);
+
+    --footer-height: 70px;
+    --footer-backgroundColor-primary: rgb(28, 54, 67);
+    --footer-backgroudColor-secondary: rgb(29, 82, 113);
+
+    --article-backgroundColor: rgb(53, 58, 64);
+
+    --text-color-primary: rgb(255, 255, 255);
+    --text-color-secondary: rgb(153, 157, 160);
+    --text-color-alternative: rgb(39, 168, 68);
+
+    --button-color-primary: rgb(39, 168, 68);
+    --button-color-secondary: rgb(150, 201, 62);
+
+    --color-yellow-primary: rgb(254, 201, 1);
+
+    --color-tag-primary: rgb(254, 193, 7);
+    --color-tag-secondary: rgb(23, 162, 183);
+    --color-tag-tertiary: rgb(220, 53, 70);
+    --color-tag-alternative: rgb(105, 118, 126);
+
+    --border-color: rgba(0, 0, 0, 0.15);
+    --input-height: 40px;
+    --input-complete: rgb(232, 240, 254);
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: var(--header-height);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+
+    min-height: 100vh;
+}
+
+body::-webkit-scrollbar {
+    width: 10px;
+}
+
+body::-webkit-scrollbar-button {
+    height: 10px;
+    background-color: var(--color-yellow-primary);
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--header-backgroundColor);
+}

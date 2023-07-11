@@ -1,0 +1,35 @@
+body {
+    height: 100vh;
+    background-color: var(--header-backgroundColor);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1,
+h2 {
+    text-align: center;
+}
+
+img {
+    filter:
+        drop-shadow(16px 30px 5px rgba(0, 0, 0, 0.25)) opacity(.7) contrast(90%) brightness(60%) grayscale(.25);
+}
+
+a {
+    text-decoration: none;
+    font-size: 2em;
+    color: white;
+    padding: 5px 15px;
+    border: 2px solid white;
+    border-radius: 5px;
+}
+
+a:hover {
+    background-color: var(--color-yellow-primary);
+    color: var(--header-backgroundColor);
+    font-weight: 600;
+    border-color: var(--color-yellow-primary);
+}

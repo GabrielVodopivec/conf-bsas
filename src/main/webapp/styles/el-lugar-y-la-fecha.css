@@ -1,0 +1,70 @@
+.elLugarYLaFecha {
+    display: flex;
+    height: 500px;
+    margin-bottom: 20px;
+}
+
+.contenedor-imagen {
+    height: 100%;
+    width: 50%;
+    background-image: url("../images/el-lugar-y-la-fecha/honolulu.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.contenedor-descripcion {
+    box-sizing: border-box;
+    padding: 20px;
+
+    height: 100%;
+    width: 50%;
+
+    color: white;
+    background-color: var(--header-backgroundColor);
+}
+
+.contenedor-descripcion h1 {
+    text-align: left;
+    margin: 5px 0;
+}
+
+.contenedor-descripcion p {
+    line-height: 1.5;
+}
+
+.contenedor-descripcion button {
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 10px;
+    color: white;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.contenedor-descripcion button:hover {
+    color: var(--header-backgroundColor);
+    background-color: white;
+}
+
+sup {
+    font-size: 0.5em;
+}
+
+@media screen and (max-width: 900px) {
+    .elLugarYLaFecha {
+        flex-direction: column;
+        height: calc(100vh - var(--header-height));
+    }
+
+    .contenedor-imagen,
+    .contenedor-descripcion {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 450px) and (max-width: 900px) {
+    .elLugarYLaFecha {
+        height: 500px;
+    }
+}

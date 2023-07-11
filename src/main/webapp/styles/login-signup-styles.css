@@ -1,0 +1,221 @@
+* {
+    -webkit-tap-highlight-color: transparent;
+}
+
+.container {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #212529;
+    overflow-x: hidden;
+}
+
+.unaClase {
+    background-image: url("../icon/eye_opened.png");
+}
+
+form {
+    height: 100%;
+    width: 600px;
+    background-color: transparent;
+}
+
+.formContent {
+    border-radius: 16px;
+    background-color: var(--header-backgroundColor);
+    box-shadow: 0px 0px 20px 8px rgba(0, 0, 0, 0.5) inset;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    padding: 50px 0;
+}
+
+img:not(.icon-password) {
+    width: 100%;
+    filter: drop-shadow(16px 30px 5px rgba(0, 0, 0, 0.3)) contrast(60%) brightness(80%);
+}
+
+.togglePasswordVisibility {
+    position: absolute;
+    height: 45px;
+    width: 45px;
+    background-color: var(--article-backgroundColor);
+    border: none;
+    bottom: 5px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.icon-password {
+    width: 100%;
+    mix-blend-mode: darken;
+    filter: contrast(.8);
+}
+
+figure.login {
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    justify-content: center;
+    -webkit-tap-highlight-color: transparent;
+}
+
+figure.signup {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 400px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    justify-content: center;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.inputsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+}
+
+.inputContainer {
+    position: relative;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+}
+
+.input {
+    padding: 10px 0 10px 10px;
+    font-size: 1.5em;
+    background-color: transparent;
+    border-color: transparent;
+    border-bottom-color: white;
+    color: white;
+    width: 85%;
+    outline-style: none;
+}
+
+.input:-webkit-autofill,
+.badInput:-webkit-autofill {
+    -webkit-transition-delay: 9999999999999999999999999999999s;
+}
+
+.errorMessage {
+    position: absolute;
+    margin: 0;
+    color: tomato;
+    background-color: var(--header-backgroundColor);
+    bottom: -.5em;
+    right: 15px;
+    padding: 0 5px;
+}
+
+.submitContainer {
+    width: 85%;
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 0;
+    -webkit-tap-highlight-color: transparent;
+}
+
+input[type="submit"] {
+    padding: 5px 15px;
+    height: 50px;
+    border-radius: 5px;
+    border-color: transparent;
+    line-height: 1em;
+    font-size: 2em;
+    font-weight: 700;
+    color: #264653;
+    background-color: #e9c46a;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    transform: scale(1.05);
+    transition: transform 100ms;
+}
+
+input[type="submit"]:active {
+    transform: scale(1);
+    transition: transform 100ms;
+}
+
+a {
+    text-decoration: none;
+    text-align: center;
+    line-height: 2.5em;
+    font-size: 1.25em;
+    color: white;
+}
+
+a:hover {
+    color: #e9c46a;
+}
+
+@media screen and (max-width: 500px) {
+    .formContent {
+        flex-direction: column-reverse;
+        justify-content: space-evenly;
+        padding: 50px 0 0 0;
+    }
+
+    form {
+        box-sizing: border-box;
+        width: 90%;
+    }
+
+
+    .input {
+        font-size: 1.15em;
+    }
+
+    .submitContainer {
+        padding: 30px 0 20px 0;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .submitContainer.login {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    figure.login img,
+    figure.signup img {
+        filter:
+            drop-shadow(16px 30px 5px rgba(0, 0, 0, 0.25)) opacity(.3) contrast(90%) brightness(60%) grayscale(.25);
+    }
+    figure.login img:hover,
+    figure.signup img:hover {
+        transform: scale(1.05);
+        transition: transform 300ms;
+    }
+
+    a {
+        margin-right: 0;
+    }
+
+    .togglePasswordVisibility {
+        width: 35px;
+        height: 35px;
+        right: 15px;
+    }
+}
+
+input[type="password"]::-ms-reveal,
+input[type="password"]::-ms-clear {
+    color: transparent !important;
+    display: none !important;
+}
